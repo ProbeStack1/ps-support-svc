@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: ps-probestack-svc
+    name: ps-support-svc
   data:
     mongodb:
       uri: ${MONGODB_URI:mongodb://localhost:27017/probestack}
