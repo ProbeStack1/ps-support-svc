@@ -48,7 +48,7 @@ EXPOSE ${PORT}
 
 # Health check (using wget which is available in alpine)
 HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:${PORT}/support/actuator/health || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://localhost:${PORT}/support-api/actuator/health || exit 1
 
 # Run the application
 ENTRYPOINT ["sh", "-c", "java -jar -Dserver.port=${PORT} app.jar"]
